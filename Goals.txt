@@ -2,5 +2,6 @@
 2. Determine best output format for interacting with these worksheets.
 3. Determine best medium for display (website/by download?)
 4. Implement parsing of input doc
-5. Implement conversion to output display
-6. Implement correctness checking for student attempts.
+5. Implement correctness checking for student attempts.
+6. Implement conversion to output executable
+7. Finalize API/CLI 
