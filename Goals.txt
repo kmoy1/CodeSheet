@@ -1,5 +1,5 @@
-1. Determine best input format for writing coding worksheets
-2. Determine best output format for interacting with these worksheets
+1. Determine best input format for writing coding worksheets.
+2. Determine best output format for interacting with these worksheets.
 3. Determine best medium for display (website/by download?)
 4. Implement parsing of input doc
 5. Implement conversion to output display

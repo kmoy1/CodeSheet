@@ -1,101 +1,58 @@
 # BEGIN WORKSHEET
 
 # DEFQ 'Q1'
-What is your full name?
-# INPUT SMALL_NUMBER
-# END
+What is the meaning of life?
+# INPUT NUMBER
+# SOLUTION 42
+# ENDQ
 
-# BEGIN QUESTION
-What is your student ID number?
-# INPUT SHORT_CODE_ANSWER
-# END QUESTION
+# DEFQ 'Q2'
+Write a sentence with 10 words.
+# INPUT ONELINE
+# SOLUTION 'iguodala to curry back to iguodala up for the layup'
+# ENDQ
 
-# END PUBLIC
+# DEFQ 'Q3'
+Write a one-argument lambda function `f` that increments a number. 
+# INPUT -lang=Python ONELINE
+# SOLUTION DOCTEST
+>>> f(4)
+4
+# ENDQ
 
-# BEGIN GROUP Exam Question One [6]
-*This is some very important text*. This text is not so important.
-# BEGIN QUESTION [2]
-These are some multiple choice questions. You must select exactly one.
+# DEFQ 'Q4'
+Write a paragraph about how CS61A is the greatest course in the world.
+# INPUT BOX
+# ENDQ
 
-# INPUT OPTION Options can be plain text.
-# INPUT OPTION Or $\LaTeX$ math,
-# INPUT OPTION Or even `code`!
+# DEFQ 'Multiple Choice Question'
+What is the first letter of the alphabet? 
+# INPUTMC A:'A', B:'B', C: 'C', D: 'D'
+# SOLUTION A
+# ENDQ
 
-# END QUESTION
+# DEFQ 'Select-All Multiple Choice Question'
+What is the first letter of the alphabet? 
+# INPUTMC -all A:'A', B:'B', C: 'C', D: 'D'
+# SOLUTION A
+# ENDQ
 
-# BEGIN QUESTION [4]
-This is a short answer question.
+# DEFQ 'What Would Python Do Question'
+# WWPD
+3
+'csm'
+x = 3; x
+#ENDQ
 
-# INPUT SHORT_ANSWER
-
-# END QUESTION
-
-# END GROUP
-
-# BEGIN GROUP Another Exam Question [6]
-
-This is another block of questions.
-
-# BEGIN GROUP A subgroup [2]
-There can be subgroups of questions.
-
-# BEGIN QUESTION [3]
-
-$\LaTeX$ display math is also supported
-$$
-    \int_{0}^\infty e^{-x^2 / 2} \, \mathrm{d}x
-$$
-
-# INPUT SELECT Select all
-# INPUT SELECT options
-# INPUT SELECT are also available
-
-# END QUESTION
-
-# END GROUP
-
-# BEGIN QUESTION [7]
-You can also include large code blocks in questions
-```
-m, t = Day(), Week(199)
-t.mask(200)(100)(150)(160)
-Day.aqi = 140
-t.aqi = 160
-```
-
-And allow code in answers too
-# INPUT LONG_CODE_ANSWER
-
-# END QUESTION
-
-# BEGIN QUESTION
-
-You can omit point values for particular questions, if you want.
-
-Paragraph answers are allowed. You can even specify the number of lines displayed! This block is four lines long.
-
-# INPUT LONG_ANSWER 4
-
-# END QUESTION
-
-# BEGIN QUESTION
-
-Images and other markdown features should all be supported. If it works on GitHub, it should work here.
-
-## Stuff
-
-![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-# INPUT SHORT_CODE_ANSWER
-
-# END QUESTION
-
-# END GROUP
+# DEFQ 'Code Writing Question'
+Write a function `fib` that takes argument `n` and calculates the `n`-th fibonacci number.
+Assume 1-indexed, i.e. You may use recursion or iteration.
+#INPUT -lang=Python BOX
+# SOLUTION -DOCTEST
+>>> fib(1)
+1
+>>> fib(10)
+55
+#ENDQ 
 
 #END WORKSHEET
