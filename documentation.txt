@@ -1,0 +1,29 @@
+This is the documentation for CodeSheet commands.
+
+A worksheet is defined by a set of question blocks. Because the input file is 
+markdown, all commands are prefaced with a hashtag (#). Commands may also include flags, which
+are always prefixed with a hyphen (-). They always follow the first word of the command. 
+
+# DEFQ defines a question block, which is (and must be) ended with # ENDQ.
+Immediately following is the name of the question, which will uniquely identify a question object. 
+
+Immediately following the question block is metatext, which usually consists of question text 
+itself, although other information may be placed here. 
+
+The next part of a question block consists of an input type. As of now, the possible input types are:
+- NUMBER: A (default) 4-character space for numerical input. The width may be altered with a flag. 
+- ONELINE: A one-line input that spans the page. This is usually used for short-answer inputs but may also be used for numerical inputs.
+- BOX: A paragraph-like box. 
+- MC: Multiple choice. Multiple choice inputs must immediately follow,  in dictionary-like format: (Key1):DisplayChoice1, (Key2): DisplayChoice2, etc.
+Note only DisplayChoice(i) will be displayed to the user, and in the order provided. 
+
+There are also special (prototype) code inputs available:
+- # WWPD: Python Interpreter with pre-loaded inputs. In order, each line corresponds to a Python interpreter input, and input will be formulated for each as a question. This follows a "What would Python Do" structure. 
+
+An (optional) SOLUTION box follows. This will perform autograding of student answers, comparing their answer to the solution provided. For cases with numerical or multiple-choice questions, the number/choice follows #SOLUTION. A sentence string can also follow for longer paragraph answers, though it will only serve as a reference answer (no autograding). Immediate feedback can be toggled. By default, doctests and solutions are hidden. 
+
+For coding questions, -lang=(...) will specify a language. For now, supported languages are:
+-Python.
+
+The -DOCTEST flag will run a doctest for the specified language. Supported doctest languages are:
+-Python.
