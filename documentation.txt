@@ -4,6 +4,8 @@ A worksheet is defined by a set of question blocks. Because the input file is
 markdown, all commands are prefaced with a hashtag (#). Commands may also include flags, which
 are always prefixed with a hyphen (-). They always follow the first word of the command. 
 
+The interactive worksheet is in _______________ format. 
+
 # DEFQ defines a question block, which is (and must be) ended with # ENDQ.
 Immediately following is the name of the question, which will uniquely identify a question object. 
 
@@ -14,8 +16,7 @@ The next part of a question block consists of an input type. As of now, the poss
 - NUMBER: A (default) 4-character space for numerical input. The width may be altered with a flag. 
 - ONELINE: A one-line input that spans the page. This is usually used for short-answer inputs but may also be used for numerical inputs.
 - BOX: A paragraph-like box. 
-- MC: Multiple choice. Multiple choice inputs must immediately follow,  in dictionary-like format: (Key1):DisplayChoice1, (Key2): DisplayChoice2, etc.
-Note only DisplayChoice(i) will be displayed to the user, and in the order provided. 
+- MC: Multiple choice. Multiple choice inputs must immediately follow,  in dictionary-like format: (Key1):DisplayChoice1, (Key2): DisplayChoice2, etc. Note only DisplayChoice(i) will be displayed to the user, and in the order provided. The -all flag specifies a select-all multiple choice. 
 
 There are also special (prototype) code inputs available:
 - # WWPD: Python Interpreter with pre-loaded inputs. In order, each line corresponds to a Python interpreter input, and input will be formulated for each as a question. This follows a "What would Python Do" structure. 
