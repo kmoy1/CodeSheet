@@ -4,7 +4,10 @@ A worksheet is defined by a set of question blocks. Because the input file is
 markdown, all commands are prefaced with a hashtag (#). Commands may also include flags, which
 are always prefixed with a hyphen (-). They always follow the first word of the command. 
 
-The interactive worksheet is in _______________ format. 
+ALL worksheets must specify beginning and end clause: specifically, #BEGIN WORKSHEET and #END WORKSHEET on the first
+and last lines of the file. 
+
+The interactive worksheet is in online deployable format.
 
 # DEFQ defines a question block, which is (and must be) ended with # ENDQ.
 Immediately following is the name of the question, which will uniquely identify a question object. 
